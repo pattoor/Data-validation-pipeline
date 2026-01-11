@@ -1,0 +1,41 @@
+name: Python Data Pipeline CI
+
+on:
+  push:
+    branches: [ main, master, develop ]
+    # Ignores changes that don't affect the code execution
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
+      - 'LICENSE'
+      - '.github/workflows/**' # To prevent triggering when editing the workflow itself (optional)
+  pull_request:
+    branches: [ main, master, develop ]
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+        # This caches the dependencies so that the second run is much faster
+        cache: 'pip' # Pip caching
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pandas "pydantic[email]" pytest numpy
+
+    - name: Run Pytest
+      run: |
+        # Usamos -v para ver detalles y --tb=short para que el log sea limpio
+        pytest -v --tb=short

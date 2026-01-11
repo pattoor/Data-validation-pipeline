@@ -1,0 +1,26 @@
+# --- Python & Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.python-version
+
+# --- Environments ---
+env/
+venv/
+ENV/
+.env
+
+# --- Project Specific (Data & Outputs) ---
+# Ignore all CSV and JSON files in data and logs folders 
+# But keep the folders if they have a .gitkeep file
+data/raw/*.csv
+data/processed/*.csv
+data/reports/*.json
+logs/*.log
+
+# --- IDE & OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
