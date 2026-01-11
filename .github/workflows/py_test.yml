@@ -38,4 +38,4 @@ jobs:
     - name: Run Pytest
       run: |
         # Usamos -v para ver detalles y --tb=short para que el log sea limpio
-        pytest -v --tb=short
+        python -m pytest -v --tb=short
