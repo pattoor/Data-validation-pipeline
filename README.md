@@ -1,6 +1,6 @@
 # Data Quality & Validation Pipeline
 
-![Python Tests](https://github.com/pattoor/Data-validation-pipeline/actions/workflows/python-tests.yml/badge.svg)
+![Python Tests](https://github.com/pattoor/Data-validation-pipeline/actions/workflows/py_test.yml/badge.svg)
 ![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -34,5 +34,7 @@ In modern data architectures, "Garbage In, Garbage Out" is a major risk. Busines
 - **Automated Validation**: Identifies missing values, wrong formats, and out-of-range numbers.
 - **Error Reporting**: Generates a detailed `Validation_Errors.json` for data auditing.
 - **CI/CD Integration**: Automated testing on every push.
+
+This repository is a portfolio demo focused on data quality and integrity validation.
 
 **Authored by [Patricio Romero]** - Systems Engineering Student. 
