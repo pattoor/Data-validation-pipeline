@@ -7,6 +7,13 @@
 ## 🎯 The Problem
 In modern data architectures, "Garbage In, Garbage Out" is a major risk. Businesses lose thousands of dollars due to corrupt data feeding their BI tools or AI models. This project acts as a Data Gatekeeper, ensuring that only high-quality, schema-compliant data reaches the final destination.
 
+## 👤 Who Is This For?
+This project is designed for:
+- Data-driven teams relying on CSV / JSON datasets
+- Analytics and BI pipelines that require clean inputs
+- ML pipelines where bad data can silently degrade models
+- Teams that need automated data quality checks before consumption
+
 ## 🛠 Tech Stack
 - **Python 3.10+**
 - **Pandas**: High-performance data manipulation.
@@ -35,6 +42,15 @@ In modern data architectures, "Garbage In, Garbage Out" is a major risk. Busines
 - **Error Reporting**: Generates a detailed `Validation_Errors.json` for data auditing.
 - **CI/CD Integration**: Automated testing on every push.
 
+## 💼 Business Impact
+This validation pipeline helps teams:
+- Prevent corrupt data from reaching dashboards or ML models
+- Detect data issues early in automated pipelines
+- Reduce manual data inspection
+- Improve reliability of analytics and decision-making
+
 This repository is a portfolio demo focused on data quality and integrity validation.
 
-**Authored by [Patricio Romero]** - Systems Engineering Student. 
+**Authored by [Patricio Romero]** 
+Automation & Data Quality | Python 
+Systems Engineering Student
